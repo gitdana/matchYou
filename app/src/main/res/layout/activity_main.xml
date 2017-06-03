@@ -1,18 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.matchyou.MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/homeImage"
+        android:layout_width="400dp"
+        android:layout_height="1000dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/lovecartoons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/vew" />
+
+    <EditText
+        android:id="@+id/boysName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="155dp"
+        android:ems="10"
+        android:hint="Boy's Name"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:textColor="?attr/colorControlActivated"
+        android:textStyle="bold|italic"
+        android:layout_below="@+id/vew"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/girlName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/boysName"
+        android:layout_alignStart="@+id/boysName"
+        android:layout_below="@+id/boysName"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:hint="Girls Name Here"
+        android:inputType="textPersonName"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold|italic" />
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/girlName"
+        android:layout_alignStart="@+id/girlName"
+        android:layout_below="@+id/girlName"
+        android:layout_marginTop="57dp"
+        android:background="?android:attr/colorAccent"
+        android:onClick="GetNames"
+        android:text="It's Time To Get Greatings"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold|italic" />
+
+
+</RelativeLayout>
