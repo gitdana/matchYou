@@ -10,19 +10,20 @@
         android:id="@+id/homeImage"
         android:layout_width="400dp"
         android:layout_height="1000dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/lovecartoons"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/vew" />
+        android:scaleType="fitXY"
+        android:src="@drawable/lovecartoons" />
 
     <EditText
         android:id="@+id/boysName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="155dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
         android:ems="10"
         android:hint="Boy's Name"
         android:inputType="textPersonName"
@@ -30,39 +31,41 @@
         android:singleLine="false"
         android:textColor="?attr/colorControlActivated"
         android:textStyle="bold|italic"
-        android:layout_below="@+id/vew"
+        android:layout_above="@+id/girlName"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp" />
 
     <EditText
         android:id="@+id/girlName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/boysName"
-        android:layout_alignStart="@+id/boysName"
-        android:layout_below="@+id/boysName"
-        android:layout_marginTop="52dp"
         android:ems="10"
-        android:hint="Girls Name Here"
+        android:hint="Girls Name"
         android:inputType="textPersonName"
         android:textAllCaps="true"
         android:textColor="@color/colorAccent"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold|italic"
+        android:layout_marginBottom="81dp"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignLeft="@+id/boysName"
+        android:layout_alignStart="@+id/boysName" />
 
 
     <Button
         android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:onClick="GetNames"
+        android:text="Match"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold|italic"
+        android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/girlName"
         android:layout_alignStart="@+id/girlName"
-        android:layout_below="@+id/girlName"
-        android:layout_marginTop="57dp"
-        android:background="?android:attr/colorAccent"
-        android:onClick="GetNames"
-        android:text="It's Time To Get Greatings"
-        android:textColor="@android:color/background_light"
-        android:textStyle="bold|italic" />
+        android:layout_marginBottom="42dp" />
 
 
 </RelativeLayout>
